@@ -8,8 +8,8 @@ import { SearchHeaderComponent } from './components/headers/search-header/search
 import { SortHeaderComponent } from './components/headers/sort-header/sort-header.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginPageComponent } from './components/authentication/login-page/login-page.component';
-import { RegistrationPageComponent } from './components/authentication/registration-page/registration-page.component';
 import { SearchItemComponent } from './components/search-item/search-item.component';
+import {RegistrationPageComponent} from '@auth/registration-page/registration-page.component';
 
 @NgModule({
   declarations: [
