@@ -1,1 +1,9 @@
-<p>sort-header works!</p>
+<div class="header">
+  <span>
+    Sorting by:
+  </span>
+  <span class="sort-buttons" *ngFor="let sortingItem of sortingItems" color="blue">
+    {{sortingItem}}
+  </span>
+  <input [type]="text" placeholder="">
+</div>

@@ -1,1 +1,10 @@
-<p>search-header works!</p>
+<div class="header center-position">
+    <img class="youtube-icon" src="/assets/images/youtube-icon.svg" alt="youtube-icon">
+    <input type="text" placeholder="What are you want to find out">
+    <img src="/assets/images/search-button.svg" alt="sort-button-icon">
+    <img class="sort-button" src="/assets/images/sort-button-icon.svg" alt="sort-button-icon" (click)="onSortButtonClick()">
+</div>
+
+<div *ngIf="sortButtonClicked" >
+  <app-sort-header></app-sort-header>
+</div>

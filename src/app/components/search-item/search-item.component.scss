@@ -1,0 +1,27 @@
+.item {
+  width: 231px;
+  height: 327px;
+  background: #E5E5E5;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+}
+
+.center-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+mat-card-footer {
+  padding-top: 8px;
+}

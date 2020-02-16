@@ -1,1 +1,32 @@
-<p>search-item works!</p>
+<mat-card class="item">
+<div class="content">
+  <img src="/assets/images/card-image.svg" alt="watchers-icon">
+  <div class="statistics">
+    <div>
+      <img src="/assets/images/watchers-icon.svg" alt="watchers-icon">
+      {{statistics.viewCount}}
+    </div>
+    <div>
+      <img src="/assets/images/like-icon.svg" alt="watchers-icon">
+      {{statistics.likeCount}}
+    </div>
+    <div>
+      <img src="/assets/images/unlike-icon.svg" alt="watchers-icon">
+      {{statistics.dislikeCount}}
+    </div>
+    <div>
+      <img src="/assets/images/rectangles-icon.svg" alt="watchers-icon">
+      {{statistics.commentCount}}
+    </div>
+  </div>
+
+  <mat-card-content>
+    {{title}}
+  </mat-card-content>
+
+  <img src="/assets/images/more-button.svg" alt="watchers-icon">
+</div>
+  <mat-card-footer>
+    <img src="/assets/images/blue-line.svg" alt="watchers-icon">
+  </mat-card-footer>
+</mat-card>

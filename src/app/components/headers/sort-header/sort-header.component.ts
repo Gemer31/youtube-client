@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SortHeaderComponent implements OnInit {
 
+  public sortingItems: string[] = ['date', 'count of view', 'by word or sentance'];
+
   constructor() { }
 
   public ngOnInit(): void {

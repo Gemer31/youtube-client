@@ -10,6 +10,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { LoginPageComponent } from './components/authentication/login-page/login-page.component';
 import { SearchItemComponent } from './components/search-item/search-item.component';
 import {RegistrationPageComponent} from '@auth/registration-page/registration-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchItemsBlockComponent } from './components/search-items-block/search-items-block.component';
+import {MatButton, MatButtonModule, MatCardModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,15 @@ import {RegistrationPageComponent} from '@auth/registration-page/registration-pa
     PageNotFoundComponent,
     LoginPageComponent,
     RegistrationPageComponent,
-    SearchItemComponent
+    SearchItemComponent,
+    SearchItemsBlockComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

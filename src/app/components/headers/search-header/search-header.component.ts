@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchHeaderComponent implements OnInit {
 
+  private sortButtonClicked: boolean = false;
+
   constructor() { }
 
   public ngOnInit(): void {
+  }
+
+  public onSortButtonClick(): void {
+    this.sortButtonClicked = !this.sortButtonClicked;
   }
 
 }

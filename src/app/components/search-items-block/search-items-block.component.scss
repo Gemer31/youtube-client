@@ -1,0 +1,19 @@
+.app-search-item {
+  padding: 30px 30px 30px 30px;
+  border-radius: 5px;
+}
+
+.search-result {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.center-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
