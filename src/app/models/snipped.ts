@@ -1,11 +1,11 @@
-import {Thumbnail} from './thumbnail';
+import {Thumbnails} from './thumbnail';
 
 export interface Snipped {
   publishedAt: Date;
   channelId: string;
   title: string;
   description: string;
-  thumbnails: Thumbnail[];
+  thumbnails: Thumbnails;
   channelTitle: string;
   tags: string[];
   categoryId: string;

@@ -1,6 +1,13 @@
-<app-search-header></app-search-header>
+<app-search-header (searchEvent)="setSearchString($event)"></app-search-header>
 
-<div class="search-result">
-  <app-search-item></app-search-item>
-  <app-search-item></app-search-item>
+
+<div class="search-result" *ngIf="searchString; else enterSmth">
+  <app-search-item *ngFor="let item of items" [item]="item"></app-search-item>
 </div>
+
+
+<ng-template #enterSmth>
+  <div class="center-position">
+    Enter something into search input
+  </div>
+</ng-template>

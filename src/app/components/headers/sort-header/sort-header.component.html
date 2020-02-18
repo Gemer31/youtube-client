@@ -2,7 +2,7 @@
   <span>
     Sorting by:
   </span>
-  <span class="sort-buttons" *ngFor="let sortingItem of sortingItems" color="blue">
+  <span class="sort-buttons" *ngFor="let sortingItem of sortingItems" color="blue" (click)="onSortClick(sortingItem)">
     {{sortingItem}}
   </span>
   <input [type]="text" placeholder="">

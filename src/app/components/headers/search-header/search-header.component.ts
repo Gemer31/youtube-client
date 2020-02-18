@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-search-header',
@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class SearchHeaderComponent implements OnInit {
 
   private sortButtonClicked: boolean = false;
+  public searchRequest: string;
+
+  @Output()
+  public searchEvent: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
@@ -18,4 +22,7 @@ export class SearchHeaderComponent implements OnInit {
     this.sortButtonClicked = !this.sortButtonClicked;
   }
 
+  public noSearchClick(): void {
+    this.searchEvent.emit(this.searchRequest);
+  }
 }

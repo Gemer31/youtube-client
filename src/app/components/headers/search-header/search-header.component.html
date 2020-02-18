@@ -1,7 +1,7 @@
 <div class="header center-position">
     <img class="youtube-icon" src="/assets/images/youtube-icon.svg" alt="youtube-icon">
-    <input type="text" placeholder="What are you want to find out">
-    <img src="/assets/images/search-button.svg" alt="sort-button-icon">
+    <input type="text" placeholder="What are you want to find out" [(ngModel)]="searchRequest">
+    <img src="/assets/images/search-button.svg" alt="sort-button-icon" (click)="noSearchClick()">
     <img class="sort-button" src="/assets/images/sort-button-icon.svg" alt="sort-button-icon" (click)="onSortButtonClick()">
 </div>
 

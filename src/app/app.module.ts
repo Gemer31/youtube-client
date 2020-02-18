@@ -13,6 +13,7 @@ import {RegistrationPageComponent} from '@auth/registration-page/registration-pa
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchItemsBlockComponent } from './components/search-items-block/search-items-block.component';
 import {MatButton, MatButtonModule, MatCardModule} from '@angular/material';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatButton, MatButtonModule, MatCardModule} from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

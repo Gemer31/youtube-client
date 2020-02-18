@@ -5,8 +5,7 @@
 
 .search-result {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-wrap: wrap;
   padding-top: 30px;
   padding-left: 100px;
   padding-right: 100px;
@@ -16,4 +15,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+app-search-item {
+  padding: 10px 10px 10px 10px;
 }
