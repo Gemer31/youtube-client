@@ -10,7 +10,7 @@ import {Snipped} from '../../models/snipped';
 })
 export class SearchItemComponent implements OnInit {
 
-  public statistics: Statistics ={
+  public statistics: Statistics = {
     viewCount: 23,
     likeCount: 43,
     dislikeCount: 53,
@@ -18,7 +18,7 @@ export class SearchItemComponent implements OnInit {
     commentCount: 22
   };
   public searchItem: Item;
-  public title: string = "Title";
+  public title: string = 'Title';
 
   constructor() { }
 
@@ -27,5 +27,4 @@ export class SearchItemComponent implements OnInit {
     this.searchItem.kind = 'kind';
 
   }
-
 }
