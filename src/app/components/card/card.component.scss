@@ -1,0 +1,52 @@
+.card {
+  height: 461px;
+  width: 1165px;
+  background: #E5E5E5;
+  display: flex;
+
+  &-icon {
+    width: 729px;
+    height: 461px;
+  }
+
+  &-content {
+    padding-left: 34px;
+    padding-top: 35px;
+
+    &-header {
+      display: flex;
+
+      &-title {
+        font-size: 24px;
+        width: 260px;
+      }
+
+      &-date {
+        font-size: 10px;
+      }
+    }
+
+    &-info {
+      padding-top: 35px;
+
+      &-description {
+        font-size: 14px;
+      }
+
+      &-description_info {
+        width: 365px;
+        height: 280px;
+      }
+
+      &-footer_info {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      &-footer_line {
+        width: 436px;
+        height: 5px;
+      }
+    }
+  }
+}

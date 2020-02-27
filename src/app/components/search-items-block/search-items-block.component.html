@@ -2,7 +2,7 @@
 
 
 <div class="search-result" *ngIf="searchString; else enterSmth">
-  <app-search-item *ngFor="let item of items" [item]="item"></app-search-item>
+  <app-search-item *ngFor="let item of items" [item]="item" (click)="redirectIntoCard(item.id)"></app-search-item>
 </div>
 
 

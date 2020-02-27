@@ -18,7 +18,7 @@ export class SearchItemsBlockComponent implements OnInit {
   constructor() { }
 
   public ngOnInit(): void {
-    this.page = pageJson;
+    this.page = <Page> pageJson;
     this.items = this.page.items;
     this.searchString = null;
     this.bb = false;
@@ -27,5 +27,9 @@ export class SearchItemsBlockComponent implements OnInit {
   public setSearchString(searchString: string): void {
     this.bb = true;
     this.items = this.page.items.filter(item => item.snippet.title.includes(searchString));
+  }
+
+  public redirectIntoCard(itemId: string): void {
+
   }
 }
