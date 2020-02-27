@@ -1,7 +1,4 @@
-<app-search-header (searchEvent)="setSearchString($event)"></app-search-header>
-
-
-<div class="search-result" *ngIf="searchString; else enterSmth">
+<div class="search-result">
   <app-search-item *ngFor="let item of items" [item]="item" (click)="redirectIntoCard(item.id)"></app-search-item>
 </div>
 

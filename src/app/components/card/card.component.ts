@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import pageJson from '../../../assets/responce.json';
 import {Item} from '../../models/item';
 import {Page} from '../../models/page';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -13,12 +14,20 @@ export class CardComponent implements OnInit {
   @Input()
   private card: Item;
   private page: Page;
+  private cardId: string;
 
-  constructor() { }
+  constructor(private router: ActivatedRoute) { }
 
   public ngOnInit(): void {
     this.page = pageJson;
 
-    this.card = this.page.items[0];
+    this.router.params.subscribe((params) => {
+      this.cardId = params.toString();
+      this.page.items.filter(item => {
+        if (item.id === this.cardId) {
+          this.card = item;
+        }
+      });
+    });
   }
 }

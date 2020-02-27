@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchItemsBlockComponent } from './components/search-items-block/search-items-block.component';
 import {MatButton, MatButtonModule, MatCardModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

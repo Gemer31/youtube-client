@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Page} from '../../models/page';
 import {Item} from '../../models/item';
 import pageJson from '../../../assets/responce.json';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-search-items-block',
@@ -13,23 +14,16 @@ export class SearchItemsBlockComponent implements OnInit {
   public page: Page;
   public items: Item [];
   public searchString: string;
-  public bb: boolean;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   public ngOnInit(): void {
     this.page = <Page> pageJson;
     this.items = this.page.items;
     this.searchString = null;
-    this.bb = false;
-  }
-
-  public setSearchString(searchString: string): void {
-    this.bb = true;
-    this.items = this.page.items.filter(item => item.snippet.title.includes(searchString));
   }
 
   public redirectIntoCard(itemId: string): void {
-
+    this.router.navigate(['/card/' + itemId]);
   }
 }
