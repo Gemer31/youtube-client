@@ -11,7 +11,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class CardComponent implements OnInit {
 
-  @Input()
   private card: Item;
   private page: Page;
   private cardId: string;
@@ -22,8 +21,8 @@ export class CardComponent implements OnInit {
     this.page = pageJson;
 
     this.router.params.subscribe((params) => {
-      this.cardId = params.toString();
-      this.page.items.filter(item => {
+      this.cardId = params.id;
+      this.page.items.forEach(item => {
         if (item.id === this.cardId) {
           this.card = item;
         }

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Item} from '../../models/item';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-search-item',
@@ -11,9 +12,13 @@ export class SearchItemComponent implements OnInit {
   @Input()
   public item: Item;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   public ngOnInit(): void {
 
+  }
+
+  public redirectIntoCard(itemId: string): void {
+    this.router.navigate(['/card/' + itemId]);
   }
 }

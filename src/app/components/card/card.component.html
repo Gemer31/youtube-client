@@ -1,36 +1,38 @@
-<div class="card">
-  <img class="card-icon" [src]="card.snippet.thumbnails.maxres.url" alt="image">
-  <div class="card-content">
-    <div class="card-content-header">
-      <div class="card-content-header-title">{{card.snippet.title}}</div>
-      <div class="card-content-header-date">{{card.snippet.publishedAt}}</div>
-    </div>
-    <div class="card-content-info">
-      <div class="card-content-info-description">Description:</div>
-      <div class="card-content-info-description_info">
-        {{card.snippet.description}}
+<div class="card-out">
+  <div class="card">
+    <img class="card-icon" [src]="card.snippet.thumbnails.maxres.url" alt="image">
+    <div class="card-content">
+      <div class="card-content-header">
+        <div class="card-content-header-title">{{card.snippet.title}}</div>
+        <div class="card-content-header-date">{{card.snippet.publishedAt}}</div>
       </div>
-      <div class="card-content-info-footer_info">
-        <div>
-          <img src="/assets/images/watchers-icon.svg" alt="watchers-icon">
-          {{card.statistics.viewCount}}
+      <div class="card-content-info">
+        <div class="card-content-info-description">Description:</div>
+        <div class="card-content-info-description_info">
+          {{card.snippet.description}}
         </div>
-        <div>
-          <img src="/assets/images/like-icon.svg" alt="like-icon">
-          {{card.statistics.likeCount}}
-        </div>
-        <div>
-          <img src="/assets/images/unlike-icon.svg" alt="unlike-icon">
-          {{card.statistics.dislikeCount}}
-        </div>
-        <div>
-          <img src="/assets/images/rectangles-icon.svg" alt="rectangles-icon">
-          {{card.statistics.commentCount}}
+        <div class="card-content-info-footer_info">
+          <div>
+            <img src="/assets/images/watchers-icon.svg" alt="watchers-icon">
+            {{card.statistics.viewCount}}
+          </div>
+          <div>
+            <img src="/assets/images/like-icon.svg" alt="like-icon">
+            {{card.statistics.likeCount}}
+          </div>
+          <div>
+            <img src="/assets/images/unlike-icon.svg" alt="unlike-icon">
+            {{card.statistics.dislikeCount}}
+          </div>
+          <div>
+            <img src="/assets/images/rectangles-icon.svg" alt="rectangles-icon">
+            {{card.statistics.commentCount}}
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card-content-info-footer_line" >
-      <img src="/assets/images/blue-line-long.svg" alt="blue-line">
+      <div class="card-content-info-footer_line">
+        <img src="/assets/images/blue-line-long.svg" alt="blue-line">
+      </div>
     </div>
   </div>
 </div>

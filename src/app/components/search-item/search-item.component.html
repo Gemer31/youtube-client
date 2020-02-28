@@ -1,31 +1,35 @@
 <mat-card class="item">
-
   <div class="content">
-  <img [src]="item.snippet.thumbnails.default.url" alt="image">
+  <img [src]="item.snippet.thumbnails.default.url"
+       alt="image">
   <div class="statistics">
     <div>
-      <img src="/assets/images/watchers-icon.svg" alt="watchers-icon">
+      <img src="/assets/images/watchers-icon.svg"
+           alt="image">
       {{item.statistics.viewCount}}
     </div>
     <div>
-      <img src="/assets/images/like-icon.svg" alt="like-icon">
+      <img src="/assets/images/like-icon.svg"
+           alt="like-icon">
       {{item.statistics.likeCount}}
     </div>
     <div>
-      <img src="/assets/images/unlike-icon.svg" alt="unlike-icon">
+      <img src="/assets/images/unlike-icon.svg"
+           alt="unlike-icon">
       {{item.statistics.dislikeCount}}
     </div>
     <div>
-      <img src="/assets/images/rectangles-icon.svg" alt="rectangles-icon">
+      <img src="/assets/images/rectangles-icon.svg"
+           alt="rectangles-icon">
       {{item.statistics.commentCount}}
     </div>
   </div>
 
-  <mat-card-content>
-    {{item.snippet.title}}
-  </mat-card-content>
+  <mat-card-content>{{item.snippet.title}}</mat-card-content>
 
-  <img src="/assets/images/more-button.svg" alt="more-button">
+  <img src="/assets/images/more-button.svg"
+       alt="more-button"
+       (click)="redirectIntoCard(item.id)">
 </div>
   <mat-card-footer>
     <img src="/assets/images/blue-line.svg" alt="blue-line">

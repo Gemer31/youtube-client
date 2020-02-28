@@ -1,8 +1,13 @@
 .card {
   height: 461px;
   width: 1165px;
-  background: #E5E5E5;
   display: flex;
+
+  &-out {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
 
   &-icon {
     width: 729px;
@@ -12,6 +17,7 @@
   &-content {
     padding-left: 34px;
     padding-top: 35px;
+    background: #E5E5E5;
 
     &-header {
       display: flex;

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Page} from '../../models/page';
 import {Item} from '../../models/item';
-import pageJson from '../../../assets/responce.json';
 import {Router} from '@angular/router';
+import {SearchService} from '../../services/search.service';
 
 @Component({
   selector: 'app-search-items-block',
@@ -11,19 +10,18 @@ import {Router} from '@angular/router';
 })
 export class SearchItemsBlockComponent implements OnInit {
 
-  public page: Page;
   public items: Item [];
   public searchString: string;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private searchService: SearchService) { }
 
   public ngOnInit(): void {
-    this.page = <Page> pageJson;
-    this.items = this.page.items;
-    this.searchString = null;
+    this.items = this.getItemsBySearchString();
+    this.searchString = '';
   }
 
-  public redirectIntoCard(itemId: string): void {
-    this.router.navigate(['/card/' + itemId]);
+  public getItemsBySearchString(): Item[] {
+    return this.searchService.getItems(this.searchString);
   }
 }

@@ -12,9 +12,9 @@ import { SearchItemComponent } from './components/search-item/search-item.compon
 import {RegistrationPageComponent} from '@auth/registration-page/registration-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchItemsBlockComponent } from './components/search-items-block/search-items-block.component';
-import {MatButton, MatButtonModule, MatCardModule} from '@angular/material';
+import { MatButtonModule, MatCardModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
+import {SearchService} from './services/search.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import {RouterModule} from '@angular/router';
     MatButtonModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
