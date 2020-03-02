@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
@@ -15,6 +14,7 @@ import { SearchItemsBlockComponent } from './components/search-items-block/searc
 import { MatButtonModule, MatCardModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {SearchService} from './services/search.service';
+import { CustomDatePipe } from './pipes/custom-date.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import {SearchService} from './services/search.service';
     LoginPageComponent,
     RegistrationPageComponent,
     SearchItemComponent,
-    SearchItemsBlockComponent
+    SearchItemsBlockComponent,
+    CustomDatePipe
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,7 @@ import {SearchService} from './services/search.service';
     MatButtonModule,
     FormsModule,
   ],
-  providers: [SearchService],
+  providers: [SearchService,     CustomDatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

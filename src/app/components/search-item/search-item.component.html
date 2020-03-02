@@ -32,6 +32,6 @@
        (click)="redirectIntoCard(item.id)">
 </div>
   <mat-card-footer>
-    <img src="/assets/images/blue-line.svg" alt="blue-line">
+    <img [src]="getDateLine(item.snippet.publishedAt)" alt="blue-line">
   </mat-card-footer>
 </mat-card>

@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-search-header',
@@ -8,12 +9,12 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class SearchHeaderComponent implements OnInit {
 
   private sortButtonClicked: boolean = false;
-  public searchRequest: string;
+  public searchString: string;
 
   @Output()
   public searchEvent: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   public ngOnInit(): void {
   }
@@ -23,6 +24,6 @@ export class SearchHeaderComponent implements OnInit {
   }
 
   public noSearchClick(): void {
-    this.searchEvent.emit(this.searchRequest);
+    this.router.navigate(['/search/' + this.searchString]);
   }
 }

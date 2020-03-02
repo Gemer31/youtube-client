@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Item} from '../../models/item';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {SearchService} from '../../services/search.service';
 
 @Component({
@@ -13,12 +13,14 @@ export class SearchItemsBlockComponent implements OnInit {
   public items: Item [];
   public searchString: string;
 
-  constructor(private router: Router,
+  constructor(private router: ActivatedRoute,
               private searchService: SearchService) { }
 
   public ngOnInit(): void {
-    this.items = this.getItemsBySearchString();
-    this.searchString = '';
+    this.router.params.subscribe((params) => {
+      this.searchString = params.searchString || '';
+      this.items = this.getItemsBySearchString();
+    });
   }
 
   public getItemsBySearchString(): Item[] {
